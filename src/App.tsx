@@ -19,7 +19,7 @@ function App() {
         <MaterialsSection />
         <TestimonialsSection />
         <p>0</p>
-        <p>25</p>
+        <p>24</p>
       </main>
       <Footer />
     </div>
