@@ -1,0 +1,43 @@
+@use "@/styles/mixins" as m;
+@import "@/styles/vars";
+
+.choosing {
+  padding: 120px 0;
+}
+
+.container {
+  @include m.containerStyles(0 80px);
+  display: flex;
+  gap: 130px;
+  h2 {
+    @include m.heading2;
+    padding-top: 38px;
+    white-space: nowrap;
+  }
+}
+.strongSides {
+  display: flex;
+  gap: 28px;
+  .strongSide {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    min-width: 150px;
+    width: 100%;
+    h3 {
+      color: $blackHeadingColor;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    p {
+      color: $blackHeadingColor;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 32px;
+    }
+    .moreInfo {
+      @include m.moreBtn;
+    }
+  }
+}

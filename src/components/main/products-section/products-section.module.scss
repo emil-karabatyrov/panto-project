@@ -1,0 +1,139 @@
+@use "@/styles/mixins" as m;
+@import "@/styles/vars";
+
+.products {
+  padding: 50px 0;
+  background: rgba(247, 247, 247, 1);
+}
+.container {
+  @include m.containerStyles(0 120px);
+  display: flex;
+  flex-direction: column;
+  h2 {
+    @include m.heading2;
+    text-align: center;
+  }
+  .viewAll {
+    @include m.moreBtn;
+    margin-top: 60px;
+    align-self: center;
+  }
+}
+
+.tabs {
+  width: 348px;
+  margin: 32px auto 0 auto;
+  height: 57px;
+  box-sizing: border-box;
+  display: flex;
+  border-radius: 44px;
+  background: rgba(238, 238, 238, 1);
+  padding: 6px;
+  justify-content: space-between;
+  align-items: center;
+  .tab {
+    cursor: pointer;
+    width: 84px;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $blackHeadingColor;
+    opacity: 0.8;
+    &.active {
+      border-radius: 32px;
+      background: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.cards {
+  font-family: Inter;
+  margin-top: 130px;
+  color: $blackHeadingColor;
+  display: flex;
+  gap: 42px;
+  position: relative;
+  .sliderBtn {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 1) url("@/assets/arrow.svg") no-repeat
+      center center;
+    border-radius: 26.09px;
+    box-shadow: 0px 7.03125px 19.53125px 0px rgba(0, 0, 0, 0.06);
+    color: black;
+    flex: 0 0 auto;
+  }
+  .sliderBtnL {
+    position: absolute;
+    top: 170px;
+    left: -25px;
+  }
+  .sliderBtnR {
+    transform: rotate(180deg);
+    position: absolute;
+    top: 170px;
+    right: -25px;
+  }
+  .card {
+    max-width: 268.09px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 1);
+    height: 403px;
+    padding: 0 21px;
+    padding-bottom: 28px;
+    .imgWrapper {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      background: rgb(237, 237, 237);
+      margin: 0 -21px;
+      height: 239px;
+      img {
+        margin: 0 25px;
+        align-self: start;
+        position: relative;
+        top: -51px;
+      }
+    }
+    .productDescription {
+      margin-top: 13px;
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      .productType {
+      }
+    }
+    .cardFooter {
+      display: flex;
+      align-items: center;
+      .price {
+        display: flex;
+        gap: 3px;
+        width: 54.83px;
+        height: 25.89px;
+        font-weight: 600;
+        color: rgba(13, 27, 57, 1);
+        flex: 1 0 auto;
+        .currency {
+          font-size: 15.23px;
+          align-self: start;
+        }
+        .value {
+          font-size: 21.33px;
+        }
+      }
+      .add {
+        width: 48.74px;
+        height: 48.74px;
+        color: #ffffff;
+        font-size: 40px;
+        border-radius: 31px;
+        background: rgba(13, 27, 57, 1);
+      }
+    }
+  }
+}

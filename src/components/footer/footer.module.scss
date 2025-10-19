@@ -1,0 +1,92 @@
+@use "@/styles/mixins" as m;
+@import "@/styles/vars";
+
+.footer {
+  padding-top: 118px;
+  height: 344px;
+  color: #000000;
+  background: rgba(247, 247, 247, 1);
+  .container {
+    @include m.containerStyles(0 180px);
+  }
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  .description {
+    width: 293px;
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    h3 {
+      color: $blackHeadingColor;
+      font-size: 28px;
+    }
+    p {
+      color: $blackHeadingColor;
+      opacity: 0.8;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  gap: 110px;
+  .services {
+  }
+  .furniture {
+  }
+  .follow {
+  }
+}
+.linksBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  h4 {
+    color: rgba(246, 151, 63, 1);
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    li {
+      color: $blackHeadingColor;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    .facebook {
+      padding-left: 30px;
+      background: url("@/assets/facebook.svg") no-repeat;
+      background-position: 5px 0px;
+    }
+    .twitter {
+      padding-left: 30px;
+      background: url("@/assets/twitter.svg") no-repeat;
+    }
+    .instagram {
+      padding-left: 30px;
+      background: url("@/assets/instagram.svg") no-repeat;
+    }
+  }
+}
+.promo {
+  margin-top: 130px;
+  color: rgba(30, 40, 51, 1);
+  font-size: 15px;
+  display: flex;
+  gap: 40px;
+
+  span {
+    &:first-child {
+      flex: 1 0 auto;
+    }
+  }
+}

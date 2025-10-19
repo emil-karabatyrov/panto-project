@@ -1,0 +1,24 @@
+@use "@/styles/mixins" as m;
+
+.experiences {
+  padding-top: 306px;
+  color: #000000;
+}
+.container {
+  @include m.containerStyles(0);
+  padding-right: 140px;
+  display: flex;
+  gap: 140px;
+  .imgWrapper {
+    position: relative;
+    .previewImg {
+      margin-left: -21px;
+    }
+    &::before {
+      @include m.backgroundShadowImg(-66px, 0, 495px, 422px);
+    }
+    &::after {
+      @include m.backgroundShadowImg(72px, 174px, 495px, 301px);
+    }
+  }
+}
