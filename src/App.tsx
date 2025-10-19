@@ -18,6 +18,7 @@ function App() {
         <ExperiencesSection />
         <MaterialsSection />
         <TestimonialsSection />
+        <p>0</p>
       </main>
       <Footer />
     </div>
